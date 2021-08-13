@@ -12,7 +12,7 @@
     <Name>RecoFaciale</Name>
     <RootNamespace>RecoFaciale</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
+    <InterpreterId>CondaEnv|CondaEnv|Anaconda</InterpreterId>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
@@ -25,13 +25,58 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FaceDetectVideo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FaceDetectImg.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="main.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|Anaconda" />
     <InterpreterReference Include="Global|PythonCore|3.7-32" />
     <InterpreterReference Include="Global|PythonCore|3.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cascades\haarcascades\haarcascade_eye.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_eye_tree_eyeglasses.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_frontalcatface.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_frontalcatface_extended.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_frontalface_alt.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_frontalface_alt2.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_frontalface_alt_tree.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_frontalface_default.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_fullbody.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_lefteye_2splits.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_licence_plate_rus_16stages.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_lowerbody.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_profileface.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_righteye_2splits.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_russian_plate_number.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_smile.xml" />
+    <Content Include="Cascades\haarcascades\haarcascade_upperbody.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_eye.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_eye_tree_eyeglasses.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_frontalface_alt.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_frontalface_alt2.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_frontalface_alt_tree.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_frontalface_default.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_fullbody.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_lefteye_2splits.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_lowerbody.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_profileface.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_righteye_2splits.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_smile.xml" />
+    <Content Include="Cascades\haarcascades_cuda\haarcascade_upperbody.xml" />
+    <Content Include="image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cascades\" />
+    <Folder Include="Cascades\haarcascades\" />
+    <Folder Include="Cascades\haarcascades_cuda\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
