@@ -4,7 +4,7 @@ import Recognition
 
 class main:
 
-    print("1. Image \n2. Webcam\n")
+    print("1. Face detection (Image) \n2. Face detection (Webcam)\n3. Face recognition (Webcam)")
     answer = input()
     if answer == '1':
         faceDetectImg.FaceDetectImg()
