@@ -1,5 +1,6 @@
 import faceDetectImg
 import faceDetectVideo
+import Recognition
 
 class main:
 
@@ -9,4 +10,7 @@ class main:
         faceDetectImg.FaceDetectImg()
     elif answer == '2':
         faceDetectVideo.FaceDetectVideo()
+    elif answer == '3':
+        Recognition.reco_video()
+
 
