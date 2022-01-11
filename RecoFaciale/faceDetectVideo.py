@@ -4,15 +4,15 @@ class FaceDetectVideo:
 
     def __init__(self):
 
-        # IA already trained by OpenCV
-        face_cascade = cv2.CascadeClassifier('D:\Projets visual studio\RecoFaciale\RecoFaciale\Cascades\haarcascades\haarcascade_frontalface_default.xml')
+        # IA already trained by OpenCV (fill with path of haarcascade_frontalface_default.xml )
+        face_cascade = cv2.CascadeClassifier('C:/Users/ara/PycharmProjects/Facial-Recognition/RecoFaciale/Cascades/haarcascades/haarcascade_frontalface_default.xml')
 
         # Video capture (webcam)
         vid = cv2.VideoCapture(0)
         
         while True:
             _, img = vid.read()
-            gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
             # Face finding
             faces = face_cascade.detectMultiScale(gray, 1.1, 4)
