@@ -6,7 +6,6 @@ from simple_facerec import SimpleFacerec
 class reco_image:
 
     def __init__(self):
-
         # Load and encode the image we want to test
         img_test = cv2.imread('test.png')
         rgb_img = cv2.cvtColor(img_test, cv2.COLOR_BGR2RGB)
@@ -41,12 +40,18 @@ class reco_video:
                 y1, x1, y2, x2 = face_loc[0], face_loc[1], face_loc[2], face_loc[3]
                 cv2.putText(video, name, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 200), 2)
                 cv2.rectangle(video, (x1, y1), (x2, y2), (0, 0, 200), 2)
-
             cv2.imshow("video", video)
-
             key = cv2.waitKey(1)
             if key == 27:
                 break
 
         capture.release()
         cv2.destroyAllWindows()
+
+
+class unlock:
+    def __init__(self, name):
+        if name == 'Unknown':
+            print('Unknown user, access denied')
+        else:
+            print('Welcome ', name)

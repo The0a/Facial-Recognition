@@ -1,10 +1,8 @@
-import faceDetectImg
-import faceDetectVideo
-import Recognition
-import display
+from RecoFaciale import display
+
 
 class main:
-    display.app()
+    display.MainWindow()
     # print("1. Face detection (Image) \n2. Face detection (Webcam)\n3. Face recognition (Webcam)")
     # answer = input()
     # if answer == '1':
