@@ -40,6 +40,8 @@ class reco_video:
                 y1, x1, y2, x2 = face_loc[0], face_loc[1], face_loc[2], face_loc[3]
                 cv2.putText(video, name, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 200), 2)
                 cv2.rectangle(video, (x1, y1), (x2, y2), (0, 0, 200), 2)
+                print(name)
+
             cv2.imshow("video", video)
             key = cv2.waitKey(1)
             if key == 27:
