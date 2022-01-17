@@ -1,6 +1,7 @@
 import cv2
 import face_recognition
 from simple_facerec import SimpleFacerec
+import numpy as np
 
 
 class reco_image:
@@ -32,10 +33,14 @@ class reco_video:
         capture = cv2.VideoCapture(0)
 
         while True:
+
             ret, video = capture.read()
+            face_name = np.array(1)
+            face_location = np.array(1)
 
             # Detect faces
             face_location, face_name = facerec.detect_known_faces(video)
+
             for face_loc, name in zip(face_location, face_name):
                 y1, x1, y2, x2 = face_loc[0], face_loc[1], face_loc[2], face_loc[3]
                 cv2.putText(video, name, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 200), 2)
