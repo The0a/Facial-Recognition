@@ -47,6 +47,7 @@ class reco_video:
                 cv2.rectangle(video, (x1, y1), (x2, y2), (0, 0, 200), 2)
                 print(name)
 
+            # Allows the user to close camera stream by pressing escape key
             cv2.imshow("video", video)
             key = cv2.waitKey(1)
             if key == 27:

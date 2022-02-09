@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QWidget, QApplication, QGridLayout, QPushButton
 
 
 class MainWindow(QWidget):
+    # Display of a menu with clickable buttons
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Main Frame")

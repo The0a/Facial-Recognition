@@ -5,7 +5,8 @@ class FaceDetectVideo:
     def __init__(self):
 
         # IA already trained by OpenCV (fill with path of haarcascade_frontalface_default.xml )
-        face_cascade = cv2.CascadeClassifier('C:/Users/ara/PycharmProjects/Facial-Recognition/RecoFaciale/Cascades/haarcascades/haarcascade_frontalface_default.xml')
+        face_cascade = cv2.CascadeClassifier('C:/Users/ara/PycharmProjects/Facial-Recognition/RecoFaciale/Cascades'
+                                             '/haarcascades/haarcascade_frontalface_default.xml')
 
         # Video capture (webcam)
         vid = cv2.VideoCapture(0)
